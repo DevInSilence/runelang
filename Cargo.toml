@@ -1,0 +1,10 @@
+[package]
+name = "simplang"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[workspace]
+members = []
+resolver = "2"
