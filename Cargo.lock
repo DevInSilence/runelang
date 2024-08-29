@@ -3,5 +3,17 @@
 version = 3
 
 [[package]]
-name = "simplang"
+name = "rune-analyzer"
+version = "0.1.0"
+
+[[package]]
+name = "rune-compiler"
+version = "0.1.0"
+
+[[package]]
+name = "rune-core"
+version = "0.1.0"
+
+[[package]]
+name = "runelang"
 version = "0.1.0"
