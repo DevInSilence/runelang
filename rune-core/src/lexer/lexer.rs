@@ -1,6 +1,6 @@
 use super::token::Token;
 
-#[allow(unused)] // just to silence the warning while we're working on this
+#[allow(unused)]
 pub struct Lexer {
     source: &'static str,
     index: usize,
@@ -20,5 +20,18 @@ impl Lexer {
             filename,
             tokens: Vec::new(),
         }
+    }
+
+    pub fn lex(&mut self) -> Vec<Token> {
+        while !self.is_eof() {
+            unimplemented!("Lexing loop")
+        }
+
+        self.tokens.clone()
+    }
+
+    #[inline]
+    fn is_eof(&self) -> bool {
+        self.index >= self.source.len()
     }
 }

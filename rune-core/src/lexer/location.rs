@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Location {
     pub start_index: usize,
     pub end_index: usize,

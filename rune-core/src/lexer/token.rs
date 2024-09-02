@@ -1,6 +1,6 @@
 use super::{location::Location, token_kind::TokenKind};
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Token {
     pub kind: TokenKind,
     pub loc: Location,
