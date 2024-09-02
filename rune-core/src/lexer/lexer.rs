@@ -1,3 +1,5 @@
+use crate::error::CoreError;
+
 use super::token::Token;
 
 #[allow(unused)]
@@ -22,12 +24,12 @@ impl Lexer {
         }
     }
 
-    pub fn lex(&mut self) -> Vec<Token> {
+    pub fn lex(&mut self) -> Result<Vec<Token>, CoreError> {
         while !self.is_eof() {
-            unimplemented!("Lexing loop")
+            Err(CoreError::new(None, "Not implemented".to_string()))?;
         }
 
-        self.tokens.clone()
+        Ok(self.tokens.clone())
     }
 
     #[inline]
