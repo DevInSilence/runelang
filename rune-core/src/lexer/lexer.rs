@@ -24,12 +24,18 @@ impl Lexer {
         }
     }
 
-    pub fn lex(&mut self) -> Result<Vec<Token>, CoreError> {
+    pub fn lex(&mut self) -> Result<Vec<Token>, Vec<CoreError>> {
+        let mut errs = Vec::new();
+
         while !self.is_eof() {
-            Err(CoreError::new(None, "Not implemented".to_string()))?;
+            errs.push(CoreError::new(None, "Not implemented".to_string()));
         }
 
-        Ok(self.tokens.clone())
+        if errs.is_empty() {
+            Ok(self.tokens.clone())
+        } else {
+            Err(errs)
+        }
     }
 
     #[inline]
